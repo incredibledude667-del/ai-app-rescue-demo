@@ -2,6 +2,8 @@
 
 This repository is a compact proof of a fixed-scope backend rescue. It starts with an AI-generated FastAPI service containing reproducible defects and ends with a tested repair.
 
+**[View the interactive before/after proof](https://incredibledude667-del.github.io/ai-app-rescue-demo/)**
+
 ## What the client would provide
 
 - repository access;
