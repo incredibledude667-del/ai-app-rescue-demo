@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A verified before-and-after rescue of an AI-generated FastAPI application, with executable acceptance tests."
+    />
+    <meta name="theme-color" content="#0a0d0c" />
+    <title>AI App Rescue — Tested fixes, not promises</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0d0c'/%3E%3Cpath d='M14 46V17h18c10 0 16 5 16 14 0 7-4 11-10 13l11 13H37L27 45h-3v12H14zm10-20v10h7c4 0 7-2 7-5s-3-5-7-5h-7z' fill='%23a6ff47'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#proof">Skip to verification</a>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="wordmark" href="#top" aria-label="AI App Rescue home">
+        <span class="wordmark-mark" aria-hidden="true">R/</span>
+        <span>AI APP RESCUE</span>
+      </a>
+      <nav>
+        <a href="#proof">Proof</a>
+        <a href="#workflow">Workflow</a>
+        <a
+          class="nav-cta"
+          href="https://github.com/incredibledude667-del/ai-app-rescue-demo"
+        >View code <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow hero-enter">Fixed-scope backend repair</p>
+          <h1 class="hero-enter">Broken AI code.<br /><em>Verified rescue.</em></h1>
+          <p class="hero-deck hero-enter">
+            Reproducible bugs become a tested pull request, before/after evidence,
+            and a clean handoff — without an open-ended rebuild.
+          </p>
+          <div class="hero-actions hero-enter">
+            <a class="button button-primary" href="#proof">Inspect the proof</a>
+            <a
+              class="button button-secondary"
+              href="https://github.com/incredibledude667-del/ai-app-rescue-demo"
+            >Run it yourself <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="terminal hero-enter" role="img" aria-label="Automated acceptance test output showing six tests passed">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+            <code>acceptance / rescue</code>
+          </div>
+          <div class="terminal-body">
+            <p><span class="muted">$</span> pytest -q</p>
+            <p class="test-dots" aria-hidden="true"><span>•</span><span>•</span><span>•</span><span>•</span><span>•</span><span>•</span></p>
+            <p><strong>6 passed</strong> <span class="muted">in 0.17s</span></p>
+            <div class="terminal-divider"></div>
+            <p><span class="muted">$</span> python -m scripts.compare_before_after</p>
+            <p><span class="danger">BEFORE</span> cross_tenant_status: 200</p>
+            <p><span class="success">AFTER&nbsp;</span> cross_tenant_status: 404</p>
+            <p class="terminal-final"><span class="cursor"></span> RESCUE VERIFIED</p>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#proof">
+          <span>Scroll for evidence</span>
+          <span aria-hidden="true">↓</span>
+        </a>
+      </section>
+
+      <section class="proof section" id="proof">
+        <div class="section-intro reveal">
+          <p class="eyebrow">Executable evidence</p>
+          <h2>One contract.<br />Five visible corrections.</h2>
+          <p>
+            The demo deliberately starts broken. Switch between the original
+            responses and the rescued API contract.
+          </p>
+        </div>
+
+        <div class="proof-switcher reveal" data-state="after">
+          <div class="switcher-controls" role="group" aria-label="Choose API state">
+            <button type="button" data-view="before" aria-pressed="false">Before</button>
+            <button type="button" data-view="after" aria-pressed="true">Rescued</button>
+          </div>
+
+          <div class="proof-output" aria-live="polite">
+            <div class="proof-status">
+              <span class="status-light"></span>
+              <span class="status-label">RESCUED CONTRACT</span>
+              <span class="status-count">6 / 6 checks pass</span>
+            </div>
+            <dl>
+              <div>
+                <dt>Tenant page 1</dt>
+                <dd data-before="inv_3" data-after="inv_1, inv_3">inv_1, inv_3</dd>
+              </div>
+              <div>
+                <dt>Tenant total</dt>
+                <dd data-before="3 · incorrect" data-after="2 · correct">2 · correct</dd>
+              </div>
+              <div>
+                <dt>Cross-tenant request</dt>
+                <dd data-before="200 · data exposed" data-after="404 · hidden">404 · hidden</dd>
+              </div>
+              <div>
+                <dt>Lowercase search</dt>
+                <dd data-before="no result" data-after="inv_1 returned">inv_1 returned</dd>
+              </div>
+              <div>
+                <dt>Webhook retry count</dt>
+                <dd data-before="2 · duplicated" data-after="1 · idempotent">1 · idempotent</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="workflow section" id="workflow">
+        <div class="workflow-title reveal">
+          <p class="eyebrow">72-hour rescue workflow</p>
+          <h2>Bounded in.<br />Tested out.</h2>
+        </div>
+        <ol class="workflow-list">
+          <li class="reveal">
+            <span>01</span>
+            <div>
+              <h3>Reproduce</h3>
+              <p>Turn the supplied bug list and reference outputs into failing acceptance tests.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span>02</span>
+            <div>
+              <h3>Repair</h3>
+              <p>Make the smallest safe code changes required by the written contract.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span>03</span>
+            <div>
+              <h3>Verify</h3>
+              <p>Run regression tests and compare the exact before/after behavior.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span>04</span>
+            <div>
+              <h3>Hand off</h3>
+              <p>Deliver the pull request, incident report, commands, and rollback notes.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="fit section">
+        <div class="fit-copy reveal">
+          <p class="eyebrow">A narrow promise</p>
+          <h2>Best for bugs<br />that can be proven.</h2>
+        </div>
+        <div class="fit-details reveal">
+          <div>
+            <h3>Good input</h3>
+            <p>Repository access, a reproducible bug list, expected responses, and a staging path.</p>
+          </div>
+          <div>
+            <h3>Concrete output</h3>
+            <p>A tested pull request, regression suite, before/after evidence, and handoff notes.</p>
+          </div>
+          <div>
+            <h3>Transparent process</h3>
+            <p>AI-assisted development is disclosed. Production secrets and customer data stay out of the demo.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <div class="closing-copy reveal">
+          <p class="eyebrow">Inspect before you trust</p>
+          <h2>Read the code.<br />Run the tests.</h2>
+          <p>The repository contains both the broken service and its verified repair.</p>
+          <a
+            class="button button-primary"
+            href="https://github.com/incredibledude667-del/ai-app-rescue-demo"
+          >Open the complete evidence <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>AI APP RESCUE / 2026</span>
+      <span>FastAPI · pytest · reproducible evidence</span>
+    </footer>
+  </body>
+</html>
