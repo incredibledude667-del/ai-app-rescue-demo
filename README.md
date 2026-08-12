@@ -44,3 +44,5 @@ See [INCIDENT_REPORT.md](INCIDENT_REPORT.md) for the defect-to-test mapping.
 
 The acceptance suite is CI-ready; the same two verification commands can be
 added to any GitHub Actions, GitLab CI, or client pipeline.
+
+Companion proof: [Next.js + Supabase-style TypeScript rescue](https://github.com/incredibledude667-del/nextjs-supabase-rescue-demo).
