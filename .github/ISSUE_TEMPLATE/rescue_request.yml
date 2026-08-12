@@ -1,0 +1,83 @@
+name: Request a scoped rescue
+description: Share a non-sensitive summary for a paid diagnostic or fixed-scope repair.
+title: "Rescue request: "
+labels:
+  - rescue-request
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reaching out. This form is public. **Do not paste repository access, customer data, credentials, API keys, private logs, or security vulnerabilities.** A private handoff method can be agreed before any code is shared.
+
+  - type: dropdown
+    id: engagement
+    attributes:
+      label: Preferred first step
+      options:
+        - Paid diagnostic — reproduce and scope the repair
+        - Fixed rescue — acceptance criteria already exist
+        - Agency overflow / white-label partnership
+    validations:
+      required: true
+
+  - type: input
+    id: stack
+    attributes:
+      label: Stack
+      description: Frameworks and services only; no secrets.
+      placeholder: Next.js, FastAPI, Supabase, Vercel
+    validations:
+      required: true
+
+  - type: textarea
+    id: symptom
+    attributes:
+      label: Reproducible symptom
+      description: What action fails, and what happens instead?
+      placeholder: "When a tenant opens page 2 of invoices, the API returns records from another tenant."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result / acceptance criteria
+      description: Describe the result that would prove the issue is fixed.
+      placeholder: "Only the signed-in tenant's records are returned, and a regression test passes."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Safe reproduction environment
+      options:
+        - Local setup is documented
+        - Staging environment exists
+        - Reproduction path needs to be created
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ai_permission
+    attributes:
+      label: AI-assisted engineering
+      description: Work cannot begin until the code owner authorizes the disclosed tool workflow.
+      options:
+        - Permitted, subject to a written data-handling scope
+        - Needs internal approval
+        - Not permitted
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: authority
+    attributes:
+      label: Authorization
+      options:
+        - label: I am authorized to commission work on this codebase.
+          required: true
+        - label: I understand this public form must not contain secrets or private code.
+          required: true
+
