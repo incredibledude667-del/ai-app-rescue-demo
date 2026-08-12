@@ -2,6 +2,7 @@
 .env
 .env.*
 .idea/
+.playwright-cli/
 .pytest_cache/
 .venv/
 .vscode/
@@ -9,4 +10,3 @@ __pycache__/
 *.py[cod]
 coverage.xml
 htmlcov/
-
