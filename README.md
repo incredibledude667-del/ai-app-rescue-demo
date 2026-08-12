@@ -20,6 +20,16 @@ This repository is a compact proof of a fixed-scope backend rescue. It starts wi
 
 The demo fixes six production-shaped failures: tenant data leakage, broken pagination, incorrect error semantics, unscoped search, case-sensitive search, and duplicate webhook processing.
 
+| Acceptance check | Before | Rescued |
+| --- | --- | --- |
+| Tenant `acme` page 1 | Skips `inv_1` | Returns `inv_1`, `inv_3` |
+| Reported tenant total | Incorrectly reports `3` | Correctly reports `2` |
+| Cross-tenant invoice request | Leaks data with `200` | Hides it with `404` |
+| Search for lowercase `north` | No result | Returns `inv_1` |
+| Retried payment webhook | Processes twice | Detects duplicate; count stays `1` |
+
+Current verification result: **6 acceptance tests passed**.
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
